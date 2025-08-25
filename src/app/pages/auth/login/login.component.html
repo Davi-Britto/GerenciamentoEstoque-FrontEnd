@@ -1,0 +1,27 @@
+<app-auth-layout>
+    <div class="register-container">
+        <div class="title">
+            <h1>Login Now!</h1>
+        </div>
+        <form action="" class="register-form">
+            <div class="input-form">
+                <app-input placeholder="Email"></app-input>
+                <app-input type="Password" placeholder="Password"></app-input>
+            </div>
+
+            <div class="button-register">
+                <app-button textButton="Login" variant="primary"></app-button>
+            </div>
+
+            <div class="divider">
+                <hr><span>or</span><hr>
+            </div>
+
+            <div class="button-register">
+                <a routerLink="/cadastro">
+                    <app-button textButton="Register now" variant="secondary" (click)="goToRegister()"></app-button>
+                </a>
+            </div>
+        </form>
+    </div>
+</app-auth-layout>

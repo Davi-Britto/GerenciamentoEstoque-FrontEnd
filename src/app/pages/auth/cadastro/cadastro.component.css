@@ -1,0 +1,56 @@
+.register-container {
+    width: 50%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2C2638;
+}
+
+.title{
+    margin: 3rem 0;
+}
+
+.title h1 {
+    color: white;
+    font-size: 55px;
+}
+
+.title p{
+    color: #9E99A7;
+    margin-top: 10px;
+}
+
+.title a{
+    color: #7C739A;
+    transition: color 0.3s ease;
+}
+
+.title a:hover {
+  text-decoration: underline;
+  color: #a89bd3;
+}
+
+.register-form .input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form .input-identification{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-identification app-input {
+    width: 48%;
+}
+
+.register-form hr{
+    display: flex;
+    width: 100%;
+    border: 1px solid #696570;
+}
+
+.button-register{
+    margin-top: 20px;
+}
