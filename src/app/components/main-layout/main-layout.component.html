@@ -1,0 +1,17 @@
+<div class="layout-container">
+    <app-side-bar (sidebarStateChange)="onSideBarToggle($event)"></app-side-bar>
+    <div class="content" [ngClass]="{ 'layout--sidebar-open': isSideBarOpen, 'layout--sidebar-closed': !isSideBarOpen }">
+        <div class="layout-header">
+            <div>
+                <p>Welcome John Doe!</p>
+                <h2>{{ title }}</h2>
+            </div>
+            <button (click)="toggleTheme()">
+                <span class="material-symbols-outlined">
+                    {{ isDark ? 'light_mode' : 'moon_stars' }}
+                </span>
+            </button>
+        </div>
+        <ng-content></ng-content>
+    </div>
+</div>

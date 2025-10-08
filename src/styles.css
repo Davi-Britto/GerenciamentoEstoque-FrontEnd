@@ -5,3 +5,34 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --bg: #f8f8f8;
+  --text: #1f1f1f;
+  --card-bg: #fafafa;
+  --decoration: #8A2BE2;
+  --color-chart: #ffffff;
+  --border: rgb(66, 66, 66);
+}
+
+/* Tema escuro */
+body.dark {
+  --bg: #1C1C1E;
+  --text: white;
+  --card-bg: #242424;
+  --side-bar-bg: #242424;
+  --border: rgb(66, 66, 66);
+}
+
+/* body.dark {
+  --bg: #1A191E;
+  --text: white;
+  --card-bg: #242427;
+  --side-bar-bg: #1A191E;
+  --border: rgb(66, 66, 66);
+} */

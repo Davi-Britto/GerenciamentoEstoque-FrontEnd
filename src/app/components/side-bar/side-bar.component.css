@@ -1,0 +1,106 @@
+.side-bar{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--side-bar-bg);
+    border-right: 1px solid var(--border);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.side-bar.open {
+    width: 330px;
+}
+
+.side-bar.closed {
+    width: 120px;
+}
+
+.side-bar-topo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    border-bottom: 1px solid var(--border);
+    height: 100px;
+    width: 100%;
+    padding-left: 40px;
+}
+
+.side-bar-topo button{
+    background-color: transparent;
+    color: var(--border);
+    padding-right: 10px;
+}
+
+.side-bar-topo button span {
+    cursor: pointer;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    color: white;
+}
+
+.side-bar-topo span:hover{
+    transform: translateX(-5px);
+    color: white;
+}
+
+.side-bar-itens{
+    flex: 1;
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    /* background-color: #1b1b1b; */
+    height: 100%;
+}
+
+ul li:last-child {
+    margin-top: auto; /* empurra só o 'Sair' pro final */
+}
+
+li{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: rgb(116, 116, 116);
+}
+
+li span{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+li p{
+    font-size: 18px; 
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    font-weight: 100;
+}
+
+li:hover{
+    transform: translateY(-10px);
+    color: #ffffff;
+    background-color: #1b1b1b;
+}
+
+li.isSelected {
+    border-left: 5px solid var(--decoration);
+    background: linear-gradient(90deg,rgba(90, 64, 168, 0.40) 0%, rgba(43, 23, 77, 0.30) 100%);
+    color: white;
+}

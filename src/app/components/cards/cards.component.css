@@ -1,0 +1,33 @@
+.kpi-card{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    /* border: 1px solid var(--border); */
+    background-color: var(--card-bg);
+}
+
+.kpi-card:hover{
+    transform: scale(1.03);
+}
+
+.kpi-icon span{
+    font-size: 50px;
+    color: var(--decoration);
+}
+
+.kpi-values{
+    margin-left: 20px;
+}
+
+.kpi-card p{
+    color: var(--text);
+    font-size: 18px;
+}
+
+.kpi-card h1{
+    color: var(--text);
+    font-size: 24px;
+}

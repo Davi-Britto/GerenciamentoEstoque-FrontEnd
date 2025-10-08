@@ -1,0 +1,32 @@
+<div class="side-bar" [ngClass]="{ 'open': isOpen, 'closed': !isOpen }">
+    <div class="side-bar-topo">
+        <h2 *ngIf="isOpen">SysControl</h2>
+        <button (click)="toggleSidebarVisibility()">
+            <span class="material-symbols-outlined">
+                {{ isOpen ? 'right_panel_close' : 'right_panel_open' }}
+            </span>
+        </button>
+    </div>
+    <div class="side-bar-itens">
+        <ul>
+            <li class="isSelected"><span class="material-symbols-outlined">Home</span>
+                <p *ngIf="isOpen">Home</p>
+            </li>
+            <li><span class="material-symbols-outlined">compare_arrows</span>
+                <p *ngIf="isOpen">Gerenciar</p>
+            </li>
+            <li><span class="material-symbols-outlined">analytics</span>
+                <p *ngIf="isOpen">Dashboards</p>
+            </li>
+            <li><span class="material-symbols-outlined">splitscreen_add</span>
+                <p *ngIf="isOpen">Cadastrar Produtos</p>
+            </li>
+            <li><span class="material-symbols-outlined">category</span>
+                <p *ngIf="isOpen">Cadastrar Categoria</p>
+            </li>
+            <li><span class="material-symbols-outlined">logout</span>
+                <p *ngIf="isOpen">Sair</p>
+            </li>
+        </ul>
+    </div>
+</div>
