@@ -8,14 +8,16 @@
 
 .content {
   transition: margin-left 0.3s ease, max-width 0.3s ease;
-  padding: 0 80px 40px 80px;
   box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  padding-right: 40px;
   width: 100%;
 }
 
 .layout--sidebar-open {
-  margin-left: 330px;
-  max-width: calc(100% - 330px);
+  margin-left: 260px;
+  max-width: calc(100% - 260px);
 }
 
 .layout--sidebar-closed {
@@ -28,13 +30,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 80px;
     margin-bottom: 30px;
     border-bottom: 1px solid var(--border);
 }
 
 .layout-header p{
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(116, 116, 116);
 }
 
@@ -48,5 +50,5 @@
 }
 
 .layout-header button span{
-    font-size: 40px;
+    font-size: 35px;
 }

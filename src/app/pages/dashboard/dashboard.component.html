@@ -1,0 +1,39 @@
+<div class="kpi-cards-container">
+    <app-cards cardTitle="Faturamento Mensal" cardValue="R$10.250,00" icon="attach_money"></app-cards>
+    <app-cards cardTitle="Total de Vendas" cardValue="R$10.250,00" icon="monitoring"></app-cards>
+    <app-cards cardTitle="Ticket Médio" cardValue="R$10.250,00" icon="currency_exchange"></app-cards>
+    <app-cards cardTitle="Estoque Crítico" cardValue="R$10.250,00" icon="priority_high"></app-cards>
+</div>
+<div class="dash-container">
+
+    <div class="row1">
+
+        <app-line-chart [values]="[10, 41, 35, 51, 49, 62, 69, 91, 148]"
+            [labels]="['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set']" chartTitle="Vendas"
+            #chartContainer class="chart line-chart" chartColor="#ffffff">
+        </app-line-chart>
+
+        <app-bar-chart class="chart bar-chart" chartTitle="Top Produtos" chartColor="#ffffff"
+            [values]="[1000, 900, 800, 700]" [labels]="['Coxinha', 'Empada', 'Esfiha', 'Kibe']">
+        </app-bar-chart>
+
+    </div>
+
+    <div class="row2">
+
+        <app-column-chart class="chart" chartTitle="Status Estoque" [values]="[20, 75, 120, 200]"
+            [labels]="['Coxinha', 'Empada', 'Esfiha', 'Kibe']">
+        </app-column-chart>
+
+        <app-column-chart class="chart" chartTitle="Entradas vs Saídas" [values]="[200, 50]"
+            [labels]="['Entradas', 'Saídas']">
+        </app-column-chart>
+
+    </div>
+
+    <div>
+        <h2>Ultimas Movimentações</h2>
+        <app-table [colunas]="colunas" [dados]="movimentacoes" [maximoItens]="4"/>
+
+    </div>
+</div>

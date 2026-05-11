@@ -13,4 +13,7 @@ export class ButtonComponent {
 
   @Input()
   variant: 'primary' | 'secondary' = 'primary'
+
+  @Input() 
+  disabled: boolean = false;
 }

@@ -1,0 +1,43 @@
+<table class="styled-table">
+
+  <thead>
+    <tr>
+
+      <th *ngFor="let coluna of colunas">
+        {{ coluna.header }}
+      </th>
+
+      <th *ngIf="mostrarAcoes">Ações</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let item of getDados()">
+
+      <td *ngFor="let coluna of colunas">
+        {{ item[coluna.field] }}
+      </td>
+
+      <td *ngIf="mostrarAcoes" class="buttons">
+        <button class="btn edit">Editar</button>
+        <button class="btn delete">Excluir</button>
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<div *ngIf="paginacao" class="pagination">
+
+  <app-button (click)="paginaAnterior()" textButton="Anterior" variant="secondary"
+    [disabled]="paginaAtual === 1"></app-button>
+
+  <span>Página {{ paginaAtual }}</span>
+
+  <app-button (click)="proximaPagina()" textButton="Próxima" variant="secondary"
+    [disabled]="paginaAtual === getTotalPaginas()"></app-button>
+
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { NgApexchartsModule } from 'ng-apexcharts';
 
 @Component({
@@ -8,18 +8,81 @@ import { NgApexchartsModule } from 'ng-apexcharts';
   templateUrl: './line-chart.component.html',
   styleUrls: ['./line-chart.component.css']
 })
-export class LineChartComponent {
-  @Input() seriesData: number[] = [10, 41, 35, 51, 49, 62, 69, 91, 148];
-  @Input() categories: string[] = ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set"];
-  @Input() chartTitle: string = 'Vendas';
+export class LineChartComponent implements OnInit {
 
-  chartOptions: any = {
-    series: [{ name: this.chartTitle, data: this.seriesData }],
-    chart: { type: 'line', height: 350 },
-    xaxis: { categories: this.categories},
-    stroke: { curve: 'smooth', colors: ['var(--color-chart)']},
-    dataLabels: { enabled: true},
-    tooltip: { enabled: true },
-    title: { text: this.chartTitle, align: 'left', style: { fontSize: '16px', color: '#fff' } }
-  };
+  @Input() values: number[] = [];
+
+  @Input() labels: string[] = [];
+
+  @Input() chartTitle: string = '';
+
+  @Input() chartColor: string = '';
+
+  @ViewChild('chartContainer')
+  chartContainer!: ElementRef;
+
+  chartOptions: any;
+
+  ngOnInit(): void {
+
+    this.chartOptions = {
+
+      series: [
+        {
+          name: this.chartTitle,
+          data: this.values
+        }
+      ],
+
+      chart: {
+        type: 'line',
+        height: 300,
+        foreColor: '#ffffff'
+      },
+
+      xaxis: {
+        categories: this.labels
+      },
+
+      stroke: {
+        curve: 'smooth',
+        colors: [this.chartColor]
+      },
+
+      dataLabels: {
+        enabled: true
+      },
+
+      tooltip: {
+        enabled: true
+      },
+
+      title: {
+        text: this.chartTitle,
+        align: 'left',
+        style: {
+          fontSize: '16px',
+          color: '#fff'
+        }
+      }
+    };
+  }
+
+  private resizeObserver!: ResizeObserver;
+
+  ngAfterViewInit() {
+
+    this.resizeObserver = new ResizeObserver(() => {
+      window.dispatchEvent(new Event('resize'));
+    });
+
+    this.resizeObserver.observe(this.chartContainer.nativeElement);
+  }
+
+  ngOnDestroy() {
+
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+    }
+  }
 }

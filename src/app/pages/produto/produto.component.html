@@ -1,0 +1,17 @@
+<div class="input-container">
+  <app-input placeholder="Nome"></app-input>
+
+  <app-input placeholder="Preço"></app-input>
+
+  <select>
+    <option value="" disabled selected>Categoria:</option>
+
+    <option *ngFor="let c of categorias" [value]="c.id">
+      {{ c.nome }}
+    </option>
+  </select>
+
+  <app-button textButton="Cadastrar" variant="secondary"></app-button>
+</div>
+
+<app-table [colunas]="colunas" [dados]="produtos" [mostrarAcoes]="true" [paginacao]="true" [maximoItens]="15"/>

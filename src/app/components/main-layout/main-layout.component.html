@@ -7,11 +7,11 @@
                 <h2>{{ title }}</h2>
             </div>
             <button (click)="toggleTheme()">
-                <span class="material-symbols-outlined">
+                <span translate="no" class="material-symbols-outlined">
                     {{ isDark ? 'light_mode' : 'moon_stars' }}
                 </span>
             </button>
         </div>
-        <ng-content></ng-content>
+        <router-outlet></router-outlet>
     </div>
 </div>

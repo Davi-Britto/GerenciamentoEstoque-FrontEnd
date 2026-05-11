@@ -10,41 +10,72 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 })
 export class ColumnChartComponent implements OnInit {
 
-  @Input() seriesData: number[] = [20, 75, 120, 200, 40, 60];
-  @Input() categories: string[] = ["Coxinha", "Empada", "Esfiha", "Kibe", "Croquete", "Queijo"];
-  @Input() chartTitle: string = 'Status do Estoque';
+  @Input() values: number[] = [];
+  @Input() labels: string[] = [];
+  @Input() chartTitle: string = '';
 
   chartOptions: any;
 
   ngOnInit(): void {
+
     this.chartOptions = {
-      series: [{
-        name: this.chartTitle,
-        data: this.seriesData
-      }],
-      chart: { type: 'bar', height: 350 },
+
+      series: [
+        {
+          name: this.chartTitle,
+          data: this.values
+        }
+      ],
+
+      chart: {
+        type: 'bar',
+        height: 300,
+        foreColor: '#ffffff'
+      },
+
       plotOptions: {
         bar: {
           horizontal: false,
           columnWidth: '20%',
-          distributed: true // <--- importantíssimo para cores por barra
+          distributed: true
         }
       },
-      dataLabels: { enabled: true },
-      xaxis: { categories: this.categories },
-      colors: this.seriesData.map(value => this.getColor(value)), // array de cores
+
+      dataLabels: {
+        enabled: true
+      },
+
+      xaxis: {
+        categories: this.labels
+      },
+
+      colors: this.values.map(value => this.getColor(value)),
+
       title: {
         text: this.chartTitle,
         align: 'left',
-        style: { fontSize: '16px', color: '#fff' }
+        style: {
+          fontSize: '16px',
+          color: '#fff'
+        }
       },
-      tooltip: { enabled: true }
+
+      tooltip: {
+        enabled: true
+      }
     };
   }
 
   private getColor(value: number): string {
-    if (value < 50) return '#575757ff';          // vermelho
-    if (value >= 50 && value <= 150) return '#8b8b8bff'; // amarelo
-    return '#ffffffff';                          // verde
+
+    if (value < 50) {
+      return '#EF4444';
+    }
+
+    if (value <= 150) {
+      return '#F59E0B';
+    }
+
+    return '#22C55E';
   }
 }

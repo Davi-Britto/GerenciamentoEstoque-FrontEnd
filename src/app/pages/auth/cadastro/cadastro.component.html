@@ -1,24 +1,20 @@
-<app-auth-layout>
-    <div class="register-container">
-        <div class="title">
-            <h1>Create an account</h1>
-            <p>Already have an account? <a routerLink="/login">Log in</a></p>
+<div class="title">
+    <h1>Create an account</h1>
+    <p>Already have an account? <a routerLink="/login">Log in</a></p>
+</div>
+<form action="" class="register-form">
+    <div class="input-form">
+        <div class="input-identification">
+            <app-input placeholder="Your Name"></app-input>
+            <app-input placeholder="Your Company"></app-input>
         </div>
-        <form action="" class="register-form">
-            <div class="input-form">
-                <div class="input-identification">
-                    <app-input placeholder="Your Name"></app-input>
-                    <app-input placeholder="Your Company"></app-input>
-                </div>
-                <app-input placeholder="Email"></app-input>
-                <app-input type="Password" placeholder="Password"></app-input>
-            </div>
-
-            <hr>
-
-            <div class="button-register">
-                <app-button textButton="Create Account"></app-button>
-            </div>
-        </form>
+        <app-input placeholder="Email"></app-input>
+        <app-input type="Password" placeholder="Password"></app-input>
     </div>
-</app-auth-layout>
+
+    <hr>
+
+    <div class="button-register">
+        <app-button routerLink="/login" textButton="Create Account"></app-button>
+    </div>
+</form>

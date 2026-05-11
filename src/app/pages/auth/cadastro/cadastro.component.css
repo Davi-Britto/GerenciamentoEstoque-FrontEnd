@@ -1,14 +1,5 @@
-.register-container {
-    width: 50%;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #2C2638;
-}
-
 .title{
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .title h1 {
@@ -43,6 +34,10 @@
 
 .input-identification app-input {
     width: 48%;
+}
+
+app-input{
+    margin-bottom: 16px;
 }
 
 .register-form hr{

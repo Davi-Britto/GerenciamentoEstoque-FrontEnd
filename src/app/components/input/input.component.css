@@ -1,18 +1,12 @@
-.input-wrapper{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-}
-
 input {
   width: 100%;
   padding: 12px 16px;
-  background-color: #3C364C;
+  background-color: var(--side-bar-bg);
   color: #ffffff;
-  border: 1px solid #3a3a4d;
+  border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s;
 }
 
 input::placeholder {
@@ -22,5 +16,4 @@ input::placeholder {
 input:focus {
   outline: none;
   border-color: #f6f3ff;
-  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.4);
 }

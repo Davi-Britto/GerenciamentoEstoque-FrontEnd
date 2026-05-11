@@ -12,6 +12,26 @@ html, body{
 }
 
 :root {
+  --bg: #1C1C1E;
+  --text: white;
+  --card-bg: #242424;
+  --side-bar-bg: #242424;
+  --border: rgb(66, 66, 66);
+  --color-chart: #ffffff;
+  --decoration: #9900ff;
+
+}
+
+/* Tema escuro */
+/* body.dark {
+  --bg: #1C1C1E;
+  --text: white;
+  --card-bg: #242424;
+  --side-bar-bg: #242424;
+  --border: rgb(66, 66, 66);
+} */
+
+body.light {
   --bg: #f8f8f8;
   --text: #1f1f1f;
   --card-bg: #fafafa;
@@ -19,20 +39,3 @@ html, body{
   --color-chart: #ffffff;
   --border: rgb(66, 66, 66);
 }
-
-/* Tema escuro */
-body.dark {
-  --bg: #1C1C1E;
-  --text: white;
-  --card-bg: #242424;
-  --side-bar-bg: #242424;
-  --border: rgb(66, 66, 66);
-}
-
-/* body.dark {
-  --bg: #1A191E;
-  --text: white;
-  --card-bg: #242427;
-  --side-bar-bg: #1A191E;
-  --border: rgb(66, 66, 66);
-} */

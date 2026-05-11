@@ -1,0 +1,23 @@
+.input-container{
+    display: flex;
+    gap: 20px;
+}
+
+app-input {
+    width: 40%;
+}
+
+.input-container select{
+    width: 40%;
+    padding: 10px 16px;
+    background-color: var(--side-bar-bg);
+    color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+app-button {
+    width: 20%;
+}
