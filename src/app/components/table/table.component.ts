@@ -17,9 +17,9 @@ export class TableComponent {
 
   @Input()
   acoes = {
+      visualizar: false,
       editar: false,
-      excluir: false,
-      visualizar: false
+      deletar: false
   };
 
   @Output()

@@ -8,6 +8,7 @@
   import { DashboardComponent } from './pages/dashboard/dashboard.component';
   import { MovimentacaoComponent } from './pages/movimentacao/movimentacao.component';
   import { VendaComponent } from './pages/venda/venda.component';
+import { DespesaComponent } from './pages/despesa/despesa.component';
 
   export const routes: Routes = [
     {
@@ -25,8 +26,9 @@
       component: MainLayoutComponent,
       children: [
         { path: 'dashboard', component: DashboardComponent, data: { title: 'Dashboard' } },
-        { path: 'movimentacao', component: MovimentacaoComponent, data: { title: 'Movimentação' } },
         { path: 'venda', component: VendaComponent, data: { title: 'Venda' } },
+        { path: 'despesa', component: DespesaComponent, data: { title: 'Despesa' } },
+        { path: 'movimentacao', component: MovimentacaoComponent, data: { title: 'Movimentação' } },
         { path: 'produto', component: ProdutoComponent, data: { title: 'Produtos' } },
         { path: 'categoria', component: CategoriaComponent, data: { title: 'Categorias' } },
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' }

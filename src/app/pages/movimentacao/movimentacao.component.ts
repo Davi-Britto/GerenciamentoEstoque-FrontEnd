@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { TableComponent } from '../../components/table/table.component';
 import { InputSelectComponent } from "../../components/input-select/input-select.component";
 import { TIPO_MOVIMENTACAO } from '../../constants/tipo-movimentacao.constants';
-import { ETipoMovimentacao } from '../../enums/tipo-movimentacao.enum';
 import { MOTIVOS_MOVIMENTACAO } from '../../constants/motivo-movimentacao.constants';
 
 @Component({
@@ -56,10 +55,7 @@ export class MovimentacaoComponent {
 
     this.motivoMovimentacao = [];
 
-    this.motivoMovimentacao = MOTIVOS_MOVIMENTACAO.filter(
-      motivo =>
-        motivo.tiposPermitidos.includes(tipoMovimentacao)
-    );
+    this.motivoMovimentacao = MOTIVOS_MOVIMENTACAO.filter(motivo => motivo.tiposPermitidos.includes(tipoMovimentacao));
   }
 
 

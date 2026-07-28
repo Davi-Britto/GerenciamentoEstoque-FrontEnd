@@ -6,9 +6,9 @@
 
     <app-input-select (valorSelecionado)="receberTipoMovimentacaoSelecionado($event)" placeHolder="Motivo:" [itens]="motivoMovimentacao" labelKey="label" valueKey="value" [disabled]="!tipoMovimentacaoSelecionado"></app-input-select>
 
-    <app-input placeholder="Quantidade"></app-input>
+    <app-input placeholder="Quantidade" type="number"></app-input>
 
     <app-button textButton="Cadastrar" variant="secondary"></app-button>
 </div>
 
-<app-table [colunas]="colunas" [dados]="movimentacao" [acoes]="{visualizar: false,editar: false,excluir: true}" [paginacao]="true"></app-table>
+<app-table [colunas]="colunas" [dados]="movimentacao" [acoes]="{visualizar: false,editar: false,deletar: true}" [paginacao]="true"></app-table>

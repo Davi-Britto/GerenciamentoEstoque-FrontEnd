@@ -13,7 +13,6 @@ import { TableComponent } from "../../components/table/table.component";
 import { EStatusVenda } from '../../enums/status-venda.enum';
 import { VendaResponse } from '../../dtos/venda-response';
 import { VendaTableResponse } from '../../dtos/venda-table-response';
-import { ItemVendaResponse } from '../../dtos/item-venda-response';
 
 @Component({
   selector: 'app-venda',
@@ -185,7 +184,7 @@ export class VendaComponent implements OnInit {
     this.itensVenda[indice].idProduto = Number(id);
   }
 
-  alterarQuantidade(valor: number, indice: number) {
+  alterarQuantidade(valor: string, indice: number) {
     this.itensVenda[indice].quantidade = Number(valor);
   }
 

@@ -16,7 +16,7 @@
     </app-modal>
 </div>
 
-<app-table [colunas]="colunasVenda" [dados]="vendasTabela" [acoes]="{visualizar: true,editar: false,excluir: true}" [paginacao]="true" (visualizarClick)="abrirDetalhes($event)"></app-table>
+<app-table [colunas]="colunasVenda" [dados]="vendasTabela" [acoes]="{visualizar: true,editar: false,deletar: true}" [paginacao]="true" (visualizarClick)="abrirDetalhes($event)"></app-table>
 
 <app-modal title="Venda" [aberto]="mostrarDetalhes" (fechar)="mostrarDetalhes = false">
     <app-table class="table" [colunas]="colunasItensVenda" [dados]="itensVendaTabela"></app-table>

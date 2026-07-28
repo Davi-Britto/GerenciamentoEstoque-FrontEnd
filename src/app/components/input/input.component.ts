@@ -13,7 +13,7 @@ export class InputComponent {
   @Input() valorJaSelecionado: number | null = null;
 
   @Output()
-  valorDigitado = new EventEmitter<any>();
+  valorDigitado = new EventEmitter<string>();
 
   onInput(event: Event){
     const valorDigitado = (event.target as HTMLInputElement).value;

@@ -1,0 +1,12 @@
+<div class="input-container">
+
+    <app-input (valorDigitado)="receberDescricao($event)" placeholder="Descrição"></app-input>
+
+    <app-input (valorDigitado)="receberValor($event)" placeholder="Valor" type="number"></app-input>
+
+    <app-input-select (valorSelecionado)="receberCategoriaDespesa($event)" placeHolder="Tipo da Despesa:" [itens]="categoriaDespesa" labelKey="label" valueKey="value"></app-input-select>
+
+    <app-button (click)="salvarDespesa()" [disabled]="!habilitaBotao" textButton="Cadastrar" variant="secondary"></app-button>
+</div>
+
+<app-table [colunas]="colunas" [dados]="despesaResponse" [acoes]="{visualizar: false, editar: false, deletar: true}" [paginacao]="true"></app-table>
