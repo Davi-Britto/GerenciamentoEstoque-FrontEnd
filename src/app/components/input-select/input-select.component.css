@@ -1,14 +1,5 @@
 .input-container{
-    display: flex;
-    gap: 20px;
-}
-
-app-input {
-    width: 40%;
-}
-
-.input-container select{
-    width: 40%;
+    width: 100%;
     padding: 10px 16px;
     background-color: var(--side-bar-bg);
     color: #ffffff;
@@ -16,8 +7,4 @@ app-input {
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-app-button {
-    width: 20%;
 }

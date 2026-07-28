@@ -1,5 +1,5 @@
 import { CommonModule, NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
@@ -15,7 +15,21 @@ export class TableComponent {
 
   @Input() dados: any[] = [];
 
-  @Input() mostrarAcoes: boolean = false;
+  @Input()
+  acoes = {
+      editar: false,
+      excluir: false,
+      visualizar: false
+  };
+
+  @Output()
+  visualizarClick = new EventEmitter<any>();
+
+  @Output()
+  editarClick  = new EventEmitter<any>();
+
+  @Output()
+  deletarClick = new EventEmitter<any>();
 
   @Input() maximoItens: number | null = null;
 
@@ -61,5 +75,17 @@ export class TableComponent {
     return Math.ceil(
       this.dados.length / this.itensPorPagina
     );
+  }
+
+  visualizar(item: any){
+    this.visualizarClick.emit(item);
+  }
+
+  editar(item: any) {
+    this.editarClick.emit(item);
+  }
+
+  deletar(item: any){
+    this.deletarClick.emit(item);
   }
 }

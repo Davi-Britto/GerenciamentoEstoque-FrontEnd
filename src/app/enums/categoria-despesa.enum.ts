@@ -1,0 +1,17 @@
+export enum ECategoriaDespesa {
+
+    ALUGUEL = 'ALUGUEL',
+
+    ENERGIA = 'ENERGIA',
+
+    AGUA = 'AGUA',
+
+    FUNCIONARIOS = 'FUNCIONARIOS',
+
+    INGREDIENTES = 'INGREDIENTES',
+
+    MANUTENCAO = 'MANUTENCAO',
+
+    OUTROS = 'OUTROS',
+
+}

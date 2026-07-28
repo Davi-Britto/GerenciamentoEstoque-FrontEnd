@@ -3,4 +3,4 @@
     <app-button textButton="Cadastrar" variant="secondary"></app-button>
 </div>
 
-<app-table [colunas]="colunas" [dados]="categorias" [mostrarAcoes]="true" [paginacao]="true" [maximoItens]="15"></app-table>
+<app-table [colunas]="colunas" [dados]="categorias" [acoes]="{visualizar: false,editar: true,excluir: true}" [paginacao]="true"></app-table>

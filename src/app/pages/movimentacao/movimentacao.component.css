@@ -1,0 +1,13 @@
+.input-container{
+    display: flex;
+    gap: 20px;
+}
+
+app-input, app-input-select {
+    width: 40%;
+}
+
+app-button {
+    width: 20%;
+}
+

@@ -1,0 +1,14 @@
+<div class="input-container">
+
+    <app-input-select (valorSelecionado)="receberIdProdutoSelecionado($event)" placeHolder="Selecione um Produto:" [itens]="produtos" labelKey="nome" valueKey="id"></app-input-select>
+    
+    <app-input-select (valorSelecionado)="receberTipoMovimentacaoSelecionado($event)" placeHolder="Tipo de Movimentacao:" [itens]="tipoMovimentacao" labelKey="label" valueKey="value"></app-input-select>
+
+    <app-input-select (valorSelecionado)="receberTipoMovimentacaoSelecionado($event)" placeHolder="Motivo:" [itens]="motivoMovimentacao" labelKey="label" valueKey="value" [disabled]="!tipoMovimentacaoSelecionado"></app-input-select>
+
+    <app-input placeholder="Quantidade"></app-input>
+
+    <app-button textButton="Cadastrar" variant="secondary"></app-button>
+</div>
+
+<app-table [colunas]="colunas" [dados]="movimentacao" [acoes]="{visualizar: false,editar: false,excluir: true}" [paginacao]="true"></app-table>

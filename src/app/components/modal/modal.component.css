@@ -1,0 +1,49 @@
+.fundo-modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--card-bg);
+    padding:30px;
+    border-radius:10px;
+    width: 50vw;
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal h2{
+    color: var(--text);
+}
+
+.modal::-webkit-scrollbar{
+    width:8px;
+}
+
+.modal::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+.modal::-webkit-scrollbar-thumb{
+    background: #bdbdbd;
+    border-radius:10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover{
+    background:#9c9c9c;
+}

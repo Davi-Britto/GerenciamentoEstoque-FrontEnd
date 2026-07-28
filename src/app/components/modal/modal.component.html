@@ -1,0 +1,13 @@
+@if (aberto) {
+    <div class="fundo-modal">
+        <div class="modal">
+            <div class="close-modal">
+                <h2>{{ title }}</h2>
+                <app-button (click)="fecharModal()" icon="close" variant="secondary"></app-button>
+            </div>
+
+            <ng-content></ng-content>
+            
+        </div>
+    </div>
+}

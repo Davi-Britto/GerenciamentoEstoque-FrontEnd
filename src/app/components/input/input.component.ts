@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -10,4 +10,13 @@ import { Component, Input } from '@angular/core';
 export class InputComponent {
   @Input() type:string = "text"
   @Input() placeholder:string = "";
+  @Input() valorJaSelecionado: number | null = null;
+
+  @Output()
+  valorDigitado = new EventEmitter<any>();
+
+  onInput(event: Event){
+    const valorDigitado = (event.target as HTMLInputElement).value;
+    this.valorDigitado.emit(valorDigitado);
+  }
 }

@@ -1,0 +1,9 @@
+<select class="input-container" (change)="onChange($event)" [disabled]="disabled" name="" id="">
+    <option disabled selected value="">
+        {{placeHolder}}
+    </option>
+
+    <option *ngFor="let item of itens" [value]="item[valueKey]" [selected]="item[valueKey] == valorJaSelecionado">
+        {{item[labelKey]}}
+    </option>
+</select>

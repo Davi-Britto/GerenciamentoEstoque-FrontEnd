@@ -7,7 +7,7 @@
         {{ coluna.header }}
       </th>
 
-      <th *ngIf="mostrarAcoes">Ações</th>
+      <th *ngIf="acoes.visualizar || acoes.editar || acoes.excluir">Ações</th>
 
     </tr>
   </thead>
@@ -20,9 +20,10 @@
         {{ item[coluna.field] }}
       </td>
 
-      <td *ngIf="mostrarAcoes" class="buttons">
-        <button class="btn edit">Editar</button>
-        <button class="btn delete">Excluir</button>
+      <td *ngIf="acoes.visualizar || acoes.editar || acoes.excluir" class="actions">
+        <span *ngIf="acoes.visualizar" (click)="visualizar(item)" class="material-symbols-outlined">search</span>
+        <span *ngIf="acoes.editar" (click)="editar(item)" class="material-symbols-outlined">edit</span>
+        <span *ngIf="acoes.excluir" (click)="deletar(item)" class="material-symbols-outlined">delete</span>
       </td>
 
     </tr>

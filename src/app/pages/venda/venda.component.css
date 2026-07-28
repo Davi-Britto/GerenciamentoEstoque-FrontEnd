@@ -1,0 +1,9 @@
+.input-container{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+app-input, app-input-select{
+    width: 40%;
+}
